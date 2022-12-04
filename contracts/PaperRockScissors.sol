@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
+import "hardhat/console.sol";
+
 
 contract PaperRockScissors {
     enum Decision {
@@ -49,7 +51,7 @@ contract PaperRockScissors {
         bool exists;
     }
 
-    uint256 playersCounter;
+    uint256 public playersCounter;
     address[] public arrPlayers;
 
     mapping(address => Player) public players;
@@ -117,10 +119,11 @@ contract PaperRockScissors {
     }
 
     function signIn(string memory name) public {
+        console.log('hello');
         require(bytes(name).length > 0, "Name should not be empty");
         require(
-            players[msg.sender].exists == false,
-            "Player with this address alredy exists"
+           players[msg.sender].exists == false,
+           "Player with this address alredy exists"
         );
         players[msg.sender] = (Player(name, 0, 0, 0, true));
         arrPlayers.push(msg.sender);
