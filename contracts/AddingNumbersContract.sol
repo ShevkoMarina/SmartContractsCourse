@@ -1,14 +1,14 @@
 // SPDX-License-Identifier; MIT
 pragma solidity ^0.8.4;
 
-contract AddigNumbersConrtract {
+contract AddigNumbersContract {
     int a;
     int b;
     int c;
 
     function add(int num_1, int num_2) public {
         a = num_1;
-        b= num_2;
+        b = num_2;
         c = a + b;
     }
 

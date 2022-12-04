@@ -1,8 +1,3 @@
-
-
-
-const API_URL = "PU1jr72jAHmucb_oUHObuiwoCCsdtODL";
-
 const Web3 = require('web3')
 var web3 = new Web3("https://eth-goerli.g.alchemy.com/v2/" + API_URL);
 const address = "0x4EcACffE6d5b141DECDe91Ac62c747a8C64ea579";
