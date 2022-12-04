@@ -1,6 +1,6 @@
 const Web3 = require('web3')
 var web3 = new Web3("https://eth-goerli.g.alchemy.com/v2/" + API_URL);
-const address = "0x4EcACffE6d5b141DECDe91Ac62c747a8C64ea579";
+const address = "0x39AC8c05DE8e6A47B5A1250Ae600329E41Aa06A8";
 
 // Смарт-контракт суммирует 2 числа и может возвращать результат суммирования
 const ABI = [
