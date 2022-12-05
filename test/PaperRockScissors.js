@@ -22,11 +22,12 @@ describe("Calling from proxy", function () {
     // Дергаем метод регистрации через proxy-контракт
      await proxyContract.callSignIn('ProxyPlayer');
 
+     // Проверяем что изменились значения в контракте игры
      var proxyPlayerInfo = await gameContract.players(proxyContract.address);
      await expect(proxyPlayerInfo.name).to.equal('ProxyPlayer');
      await expect(proxyPlayerInfo.exists).to.equal(true);
 
-    // Delegate call
+    // Проверяем что если использовать deligate изменения произойдет в контракте proxy
     await proxyContract.connect(proxyDel).delegateCallSignIn('ProxyDelPlayer');
 
     var proxyPlayerInfo = await proxyContract.playersCounter();
