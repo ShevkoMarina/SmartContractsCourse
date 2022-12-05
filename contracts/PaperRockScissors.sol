@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
-import "hardhat/console.sol";
 
 
 contract PaperRockScissors {
@@ -119,7 +118,6 @@ contract PaperRockScissors {
     }
 
     function signIn(string memory name) public {
-        console.log('hello');
         require(bytes(name).length > 0, "Name should not be empty");
         require(
            players[msg.sender].exists == false,
